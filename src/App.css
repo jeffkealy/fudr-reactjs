@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina+Solid');
+.App {
+  text-align: center;
+}
+
+
+.App-header {
+  background-color: inherit;
+  height: 70px;
+  padding: 20px;
+  color: red;
+  font-family: 'Londrina Solid', sans-serif;
+  letter-spacing: .3em;
+}
+
+.App-title {
+  font-size: 6em;
+  margin-top: 0;
+}
+
+.App-intro {
+  font-size: large;
+}
