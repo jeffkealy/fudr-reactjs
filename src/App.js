@@ -20,22 +20,25 @@ class App extends Component {
           name: "The Lowry",
           dish: 'Chilaquiles'
         }
-      ],
-      index: 0
+      ]
     }
     // this.getData()
   }
   // getData() {
   //   fetch(YOUR_DATABASE).then(res => this.setState({restaurantInfo: res.data}))
   // }
-  nextCard(props, i) {
-    console.log('nextCard', props);
-    console.log('index', i);
 
     // this.setState({index: this.state.index + 1})
 
+  swipeYes(){
+    console.log("YES");
   }
+  swipeNo(){
+    console.log("NO");
+  }
+
   render() {
+    console.log("this.stae.rest", this.state.restaurantInfo);
     // if (this.state.restaurantInfo[0]) {
     return (
       <div className="App">
@@ -43,12 +46,12 @@ class App extends Component {
           <h1 className="App-title">Füdr</h1>
         </header>
         <div className="App-intro">
-          <Wrapper
-            restaurantName={this.state.restaurantInfo.map(data => data.name)}
-            dishName={this.state.restaurantInfo.map(data => data.dish)}
-            nextCard={this.nextCard}
-          />
 
+          <Wrapper
+            restaurantData={this.state.restaurantInfo}
+            swipeNo={this.swipeNo}
+            swipeYes={this.swipeYes}
+          />
         </div>
       </div>
     );
