@@ -8,33 +8,33 @@ class App extends Component {
     super(props)
     this.state= {
       restaurantInfo : [
-        {
-          name: 'Lowbrow',
-          dish: 'Burger'
-        },
-        {
-          name: "Pat's Tap",
-          dish: 'chicken Sandwich'
-        },
-        {
-          name: "The Lowry",
-          dish: 'Chilaquiles'
-        }
+        // {
+        //   name: 'Lowbrow',
+        //   dish: 'Burger'
+        // },
+        // {
+        //   name: "Pat's Tap",
+        //   dish: 'chicken Sandwich'
+        // },
+        // {
+        //   name: "The Lowry",
+        //   dish: 'Chilaquiles'
+        // }
       ]
     }
     // this.getData()
   }
-  // getData() {
-  //   fetch(YOUR_DATABASE).then(res => this.setState({restaurantInfo: res.data}))
-  // }
+  getData() {
+    // fetch(YOUR_DATABASE).then(res => this.setState({restaurantInfo: res.data}))
+  }
 
     // this.setState({index: this.state.index + 1})
 
-  swipeYes(){
-    console.log("YES");
+  swipeRight(prop){
+    console.log("YES", prop);
   }
-  swipeNo(){
-    console.log("NO");
+  swipeLeft(prop){
+    console.log("NO", prop);
   }
 
   render() {
@@ -49,8 +49,8 @@ class App extends Component {
 
           <Wrapper
             restaurantData={this.state.restaurantInfo}
-            swipeNo={this.swipeNo}
-            swipeYes={this.swipeYes}
+            swipeLeft={this.swipeLeft}
+            swipeRight={this.swipeRight}
           />
         </div>
       </div>

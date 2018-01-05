@@ -8,8 +8,8 @@ export const Wrapper = (props) => {
       <Cards onEnd={console.log('end')} alertLeft={<div>No</div>} alertRight={<div>Yes</div>} className='master-root'>
         {props.restaurantData.map((item, i) =>
             <Card key={i}
-             onSwipeLeft={()=>props.swipeNo(props,i)}
-             onSwipeRight={()=>props.swipeYes(props,i)}
+             onSwipeLeft={()=>props.swipeLeft(item,i)}
+             onSwipeRight={()=>props.swipeRight(item.dish,i)}
              >
                <div>
                 <h2>{item.name}</h2>
